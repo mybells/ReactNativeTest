@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android": "react-native run-android --port=8082",
     "ios": "react-native run-ios",
-    "start": "react-native start",
+    "start": "react-native start --port=8082",
     "test": "jest",
     "lint": "eslint ."
   },
@@ -19,7 +19,9 @@
     "react-native-modal": "^11.5.6",
     "react-native-reanimated": "^1.8.0",
     "react-native-safe-area-context": "^0.7.3",
-    "react-native-screens": "^2.5.0"
+    "react-native-screens": "^2.5.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -29,7 +31,8 @@
     "eslint": "^6.8.0",
     "jest": "^25.3.0",
     "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "16.11.0"
+    "react-test-renderer": "16.11.0",
+    "redux-devtools": "^3.5.0"
   },
   "jest": {
     "preset": "react-native"
