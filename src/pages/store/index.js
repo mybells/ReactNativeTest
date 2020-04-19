@@ -1,20 +1,21 @@
 import {createStore} from 'redux';
 
-function counter(state = {num: 0}, action) {
+function reducer(state = {num: 0}, action) {
+  let newState = {...state};
   switch (action.type) {
     case 'INCREMENT':
-      state.num++;
-      return state;
+      newState.num++;
+      return newState;
     case 'DECREMENT':
-      state.num--;
-      return state;
+      newState.num--;
+      return newState;
     default:
-      return state;
+      return newState;
   }
 }
 
-let store = createStore(counter);
+let store = createStore(reducer);
 
-store.subscribe(() => console.log(store.getState()));
+// store.subscribe(() => console.log(store.getState()));
 
 export {store};
