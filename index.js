@@ -15,6 +15,7 @@ import {store} from './src/pages/store';
 import ModalTester from './src/pages/ModalTester';
 import RootNavigator from './src/pages/RootNavigator';
 import Redux from './src/pages/Redux';
+import Fetch from './src/pages/Fetch';
 
 const mapStateToProps = (state) => {
   return {num: state.num};
@@ -41,6 +42,8 @@ class App extends React.Component {
             <Provider store={store}>
               <ReduxExample />
             </Provider>
+            {/* fetch请求 */}
+            <Fetch />
           </ScrollView>
         </SafeAreaView>
         {/* 导航 */}
