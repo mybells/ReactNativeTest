@@ -35,8 +35,8 @@ export default class ModalTester extends Component {
       ],
       'mockAction|1': ['下载', '试听', '喜欢'],
     };
-    getData('getdata', obj);
-    fetch('getdata').then((json) => {
+    getData('http://20181024Mock.com/mode1/tableDataOne', obj);
+    fetch('http://20181024Mock.com/mode1/tableDataOne').then((json) => {
       this.setState({data: JSON.stringify(json._bodyText)});
     });
   };
